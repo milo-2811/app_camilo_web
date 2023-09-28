@@ -5,11 +5,18 @@
   box-sizing: border-box;
   user-select: none;
 }
+
+.r1{
+  color: aliceblue;
+}
+.r2{
+  color: aliceblue;
+}
 .ng-valid:not(form).ng-touched{
 border: 5px solid #42A948;
 }
 .ng-invalid:not(form).ng-touched{
-  border : 5px solid #fa0909;
+  border: 5px solid #fa0909;
   }
 .bg-img{
   background: url('bgn.jpg');
@@ -47,6 +54,7 @@ border: 5px solid #42A948;
 }
 .field{
   position: relative;
+  border-radius: 15px;
   height: 45px;
   width: 100%;
   display: flex;
@@ -56,6 +64,9 @@ border: 5px solid #42A948;
   color: #222;
   width: 40px;
   line-height: 45px;
+}
+.boton1{
+  border-radius: 15px;
 }
 .field input{
   height: 100%;

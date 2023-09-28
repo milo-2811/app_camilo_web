@@ -1,0 +1,5 @@
+.body {
+    background-image: url('././pages/dashboard/bgn.jpg');
+    background-size: cover; /* Esto ajustará la imagen para que cubra todo el fondo */
+    background-repeat: no-repeat; /* Esto evitará que la imagen se repita */
+  }

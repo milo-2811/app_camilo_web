@@ -13,22 +13,19 @@
         <div class="content">
             <header>Bienvenido</header>
             <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+                <p class="text-danger" >{{loginError}}</p>
                 <div class="field">
                     <span class="fa fa-user"></span>
                     <input formControlName="email" type="text" required placeholder="Email">
-                   
+                    </div>
+                    <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
 
-                    <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
-
-                        <div *ngIf="email.errors?.['required']">
+                        <div *ngIf="email.errors?.['required']" class="r1">
                             El email es requerido...
                         </div>
-                        <div *ngIf="email.errors?.['email']">
+                        <div *ngIf="email.errors?.['email']" class="r2">
                             El email debe tener un formato valido.
                         </div>
-                    </div>
-
-
                 </div>
                 <div class="field space">
                     <span class="fa fa-lock"></span>
@@ -38,18 +35,20 @@
                         <i class="fa" [ngClass]="showPassword ? eyeIconOpen : eyeIconClosed"></i>
                     </span>
                 </div>
+                <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
+
+                    <div *ngIf="password.errors?.['required']" class="r1">
+                        El Password es requerido...
+                    </div>
+            </div>
+               
                 <br>
-                <div class="field">
-                    <input type="submit" value="Iniciar Sesión">
+                <div class="field" >
+                    <input class="boton1" type="submit" value="Iniciar Sesión">
                 </div>
             </form>
         </div>
     </div>
-
-
-
-
-
 
 </body>
 
